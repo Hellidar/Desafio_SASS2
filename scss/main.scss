@@ -1,0 +1,266 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    color: whitesmoke;
+    line-height: 1.5;
+}
+
+/*variables*/
+
+$background-black: rgba(0, 0, 0, 0.6);
+$tipografia: "Dwarven";
+$footer-padding: 86px;
+$footer-margin: 10px;
+$header-height: 150px;
+
+//maps//
+$textAreas: (
+    textArea1: grey,
+    textArea2: black,
+);
+
+$textArea1: map-get($textAreas, textArea1);
+$textArea2: map-get($textAreas, textArea2);
+
+.backgroundContact {
+    background-image: url(../assets/img/books.png);
+    background-repeat: repeat;
+    background-size: cover;
+
+    /*header box 1*/
+
+    @mixin header($f: 0, $fs: font-size, $g: 0, $grid: grid-template-columns) {
+        #{$fs}: $f;
+        #{$grid}: $g;
+    }
+
+    .header {
+        /*desktop*/
+
+        @media screen and (min-width: 1200px) {
+            .header_nav {
+                @include header($f: 45px, $g: 0.5fr 1fr 1fr 1fr 1fr);
+                background-image: url(../assets/img/black.png);
+                height: $header-height;
+                background-repeat: repeat-x;
+                font-family: $tipografia;
+                grid-area: header;
+                display: grid;
+                grid-template-areas: "index mods dlcs heroes contactus";
+                .nav_index {
+                    width: 70%;
+                    grid-area: index;
+                    a {
+                        .logoSize {
+                            width: 90%;
+                        }
+                    }
+                }
+
+                .nav_index:hover {
+                    transform: scale(1.3);
+                }
+
+                .nav_mods {
+                    grid-area: mods;
+                }
+
+                .nav_dlcs {
+                    grid-area: dlcs;
+                }
+
+                .nav_heroes {
+                    grid-area: heroes;
+                }
+
+                .nav_contactus {
+                    grid-area: contactus;
+                }
+            }
+        }
+
+        /*tablet*/
+
+        @media screen and (max-width: 1199px) {
+            .header_nav {
+                @include header($f: 40px, $g: 0.5fr 1fr 1fr 1fr 1fr);
+                background-image: url(../assets/img/black.png);
+                height: $header-height;
+                background-repeat: repeat-x;
+                font-family: $tipografia;
+                grid-area: header;
+                display: grid;
+                grid-template-areas: "index mods dlcs heroes contactus";
+                .nav_index {
+                    width: 70%;
+                    grid-area: index;
+                    a {
+                        .logoSize {
+                            width: 90%;
+                        }
+                    }
+                }
+
+                .nav_index:hover {
+                    transform: scale(1.3);
+                }
+
+                .nav_mods {
+                    grid-area: mods;
+                }
+
+                .nav_dlcs {
+                    grid-area: dlcs;
+                }
+
+                .nav_heroes {
+                    grid-area: heroes;
+                }
+
+                .nav_contactus {
+                    grid-area: contactus;
+                }
+            }
+        }
+
+        /* mobile*/
+
+        @media screen and (max-width: 768px) {
+            .header_nav {
+                @include header($f: 25px, $g: 0.5fr 1fr 1fr 1fr 1fr);
+                background-image: url(../assets/img/black.png);
+                height: $header-height;
+                background-repeat: repeat-x;
+                font-family: $tipografia;
+                grid-area: header;
+                display: grid;
+                grid-template-areas: "index mods dlcs heroes contactus";
+
+                .nav_index {
+                    width: 70%;
+                    grid-area: index;
+                    a {
+                        .logoSize {
+                            width: 90%;
+                        }
+                    }
+                }
+
+                .nav_index:hover {
+                    transform: scale(1.3);
+                }
+
+                .nav_mods {
+                    grid-area: mods;
+                }
+
+                .nav_dlcs {
+                    grid-area: dlcs;
+                }
+
+                .nav_heroes {
+                    grid-area: heroes;
+                }
+
+                .nav_contactus {
+                    grid-area: contactus;
+                }
+            }
+        }
+    }
+
+    /*main container box 2*/
+
+    #contact_container {
+        background-color: $background-black;
+        margin-top: 90px;
+        text-align: center;
+        .section1_contact {
+            .contact_h1 {
+                font-family: $tipografia;
+                font-weight: normal;
+                font-size: 40px;
+            }
+            div {
+                label {
+                    form-label {
+                        background-color: $background-black;
+                    }
+                }
+            }
+            p {
+                img {
+                    .letter {
+                        width: 25%;
+                    }
+                }
+            }
+
+            #textArea1 {
+                background-color: $textArea1;
+            }
+
+            #textArea2 {
+                background-color: $textArea2;
+            }
+
+            .contact_button1 {
+                margin: 10px;
+                color: whitesmoke;
+                padding: 20px;
+                background: black;
+                border-radius: 10px;
+            }
+            .contact_button2 {
+                @extend .contact_button1;
+                background: whitesmoke;
+                color: black;
+            }
+        }
+    }
+
+    /*footer box 3*/
+
+    footer {
+        background-color: $background-black;
+        grid-area: footer;
+        display: grid;
+        grid-template-areas: "social shops";
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer_section1 {
+        grid-area: social;
+        display: flex;
+        align-items: flex-end;
+        padding-top: $footer-padding;
+        margin-top: $footer-margin;
+    }
+
+    .footer_section2 {
+        grid-area: shops;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding-top: $footer-padding;
+        margin-top: $footer-margin;
+    }
+}
+
+/*links*/
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    &:hover {
+        color: orangered;
+        text-decoration: none;
+    }
+}
+
+/*font*/
+
+@font-face {
+    font-family: Dwarven;
+    src: url(../assets/fonts/DwarvenAxe\ BB\ W00\ Regular.ttf);
+}

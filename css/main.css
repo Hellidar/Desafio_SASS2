@@ -1,0 +1,199 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  color: whitesmoke;
+  line-height: 1.5;
+}
+
+/*variables*/
+.backgroundContact {
+  background-image: url(../assets/img/books.png);
+  background-repeat: repeat;
+  background-size: cover;
+  /*header box 1*/
+  /*main container box 2*/
+  /*footer box 3*/
+}
+.backgroundContact .header {
+  /*desktop*/
+  /*tablet*/
+  /* mobile*/
+}
+@media screen and (min-width: 1200px) {
+  .backgroundContact .header .header_nav {
+    font-size: 45px;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
+    background-image: url(../assets/img/black.png);
+    height: 150px;
+    background-repeat: repeat-x;
+    font-family: "Dwarven";
+    grid-area: header;
+    display: grid;
+    grid-template-areas: "index mods dlcs heroes contactus";
+  }
+  .backgroundContact .header .header_nav .nav_index {
+    width: 70%;
+    grid-area: index;
+  }
+  .backgroundContact .header .header_nav .nav_index a .logoSize {
+    width: 90%;
+  }
+  .backgroundContact .header .header_nav .nav_index:hover {
+    transform: scale(1.3);
+  }
+  .backgroundContact .header .header_nav .nav_mods {
+    grid-area: mods;
+  }
+  .backgroundContact .header .header_nav .nav_dlcs {
+    grid-area: dlcs;
+  }
+  .backgroundContact .header .header_nav .nav_heroes {
+    grid-area: heroes;
+  }
+  .backgroundContact .header .header_nav .nav_contactus {
+    grid-area: contactus;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .backgroundContact .header .header_nav {
+    font-size: 40px;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
+    background-image: url(../assets/img/black.png);
+    height: 150px;
+    background-repeat: repeat-x;
+    font-family: "Dwarven";
+    grid-area: header;
+    display: grid;
+    grid-template-areas: "index mods dlcs heroes contactus";
+  }
+  .backgroundContact .header .header_nav .nav_index {
+    width: 70%;
+    grid-area: index;
+  }
+  .backgroundContact .header .header_nav .nav_index a .logoSize {
+    width: 90%;
+  }
+  .backgroundContact .header .header_nav .nav_index:hover {
+    transform: scale(1.3);
+  }
+  .backgroundContact .header .header_nav .nav_mods {
+    grid-area: mods;
+  }
+  .backgroundContact .header .header_nav .nav_dlcs {
+    grid-area: dlcs;
+  }
+  .backgroundContact .header .header_nav .nav_heroes {
+    grid-area: heroes;
+  }
+  .backgroundContact .header .header_nav .nav_contactus {
+    grid-area: contactus;
+  }
+}
+@media screen and (max-width: 768px) {
+  .backgroundContact .header .header_nav {
+    font-size: 25px;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
+    background-image: url(../assets/img/black.png);
+    height: 150px;
+    background-repeat: repeat-x;
+    font-family: "Dwarven";
+    grid-area: header;
+    display: grid;
+    grid-template-areas: "index mods dlcs heroes contactus";
+  }
+  .backgroundContact .header .header_nav .nav_index {
+    width: 70%;
+    grid-area: index;
+  }
+  .backgroundContact .header .header_nav .nav_index a .logoSize {
+    width: 90%;
+  }
+  .backgroundContact .header .header_nav .nav_index:hover {
+    transform: scale(1.3);
+  }
+  .backgroundContact .header .header_nav .nav_mods {
+    grid-area: mods;
+  }
+  .backgroundContact .header .header_nav .nav_dlcs {
+    grid-area: dlcs;
+  }
+  .backgroundContact .header .header_nav .nav_heroes {
+    grid-area: heroes;
+  }
+  .backgroundContact .header .header_nav .nav_contactus {
+    grid-area: contactus;
+  }
+}
+.backgroundContact #contact_container {
+  background-color: rgba(0, 0, 0, 0.6);
+  margin-top: 90px;
+  text-align: center;
+}
+.backgroundContact #contact_container .section1_contact .contact_h1 {
+  font-family: "Dwarven";
+  font-weight: normal;
+  font-size: 40px;
+}
+.backgroundContact #contact_container .section1_contact div label form-label {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.backgroundContact #contact_container .section1_contact p img .letter {
+  width: 25%;
+}
+.backgroundContact #contact_container .section1_contact #textArea1 {
+  background-color: grey;
+}
+.backgroundContact #contact_container .section1_contact #textArea2 {
+  background-color: black;
+}
+.backgroundContact #contact_container .section1_contact .contact_button1, .backgroundContact #contact_container .section1_contact .contact_button2 {
+  margin: 10px;
+  color: whitesmoke;
+  padding: 20px;
+  background: black;
+  border-radius: 10px;
+}
+.backgroundContact #contact_container .section1_contact .contact_button2 {
+  background: whitesmoke;
+  color: black;
+}
+.backgroundContact footer {
+  background-color: rgba(0, 0, 0, 0.6);
+  grid-area: footer;
+  display: grid;
+  grid-template-areas: "social shops";
+  grid-template-columns: 1fr 1fr;
+}
+.backgroundContact .footer_section1 {
+  grid-area: social;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 86px;
+  margin-top: 10px;
+}
+.backgroundContact .footer_section2 {
+  grid-area: shops;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-top: 86px;
+  margin-top: 10px;
+}
+
+/*links*/
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+a:hover {
+  color: orangered;
+  text-decoration: none;
+}
+
+/*font*/
+@font-face {
+  font-family: Dwarven;
+  src: url(../assets/fonts/DwarvenAxe\ BB\ W00\ Regular.ttf);
+}
+
+/*# sourceMappingURL=main.css.map */
